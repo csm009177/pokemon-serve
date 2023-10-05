@@ -7,41 +7,41 @@ const server = http.createServer(function(request, response) {
   <head> <title>main</title>
   </head>  
   <body>  
-  <a href="http://localhost:1234/choi">choi</a>
-  <a href="http://localhost:1234/sung">sung</a>
-  <a href="http://localhost:1234/min">min</a>
+  <a href="http://localhost:1234/CPU">CPU</a>
+  <a href="http://localhost:1234/MotherBoard">MotherBoard</a>
+  <a href="http://localhost:1234/RAM">RAM</a>
+  
   </body>  </html>`
 
-  let choi = `<!DOCTYPE html>
+  let CPU = `<!DOCTYPE html>
   <html lang="en">
-  <head> <title>choi</title>
+  <head> <title>CPU</title>
   </head>  <body>  <a href="http://localhost:1234">main</a>  </body>  </html>`
-  let sung = `<!DOCTYPE html>
+  let MotherBoard = `<!DOCTYPE html>
   <html lang="en">
-  <head> <title>sung</title>
+  <head> <title>MotherBoard</title>
   </head>  <body>  <a href="http://localhost:1234">main</a>  </body>  </html>`
-  let min = `<!DOCTYPE html>
+  let RAM = `<!DOCTYPE html>
   <html lang="en">
-  <head> <title>min</title>
+  <head> <title>RAM</title>
   </head>  <body>  <a href="http://localhost:1234">main</a>  </body>  </html>`
 
 if(request.url==="/"){
   response.writeHead(200, {"Content-Type": "text/html"})
   response.end(main);
 }
-  if(request.url==="/choi") {
+  if(request.url==="/CPU") {
     response.writeHead(200, {"Content-Type": "text/html"})
-    response.end(choi);
+    response.end(CPU);
 }
-  if(request.url==="/sung") {
+  if(request.url==="/MotherBoard") {
     response.writeHead(200, {"Content-Type": "text/html"})
-    response.end(sung);
+    response.end(MotherBoard);
 }
-  if(request.url==="/min") {
+  if(request.url==="/RAM") {
     response.writeHead(200, {"Content-Type": "text/html"})
-    response.end(min);
+    response.end(RAM);
 }
-  
 });
 
 
